@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Stanford Performing Arts</title>
+    <style type="text/css">
+        #h1{
+            color: #cc0000;
+            font-size: 36 point;
+            font-weight: bold;
+            font-family: sans-serif;
+            text-align:left;
+        }
+        .first{
+            height:70px;
+            margin-bottom:1px;
+            padding-bottom:1px;
+        }
+
+
+        .edition{
+            color:#cc0000;
+            font-size:12pt;
+            font-weight: bold;
+        }
+        #bing{
+            font-size:18pt;
+            font-family: sans-serif;
+            font-weight:bold;
+        }
+        #calendar{
+            font-size:14pt;
+            font-family:sans-serif;
+            font-weight:bold;
+        }
+        .narrow{
+            padding:30px;
+            text-align: right;
+            width:300px;
+        }
+        .wide{ width:400px;  }
+        .bing{ width:500px;  }
+        .calendar{  width:250px;
+            padding-left:30px;
+            padding-top:20px;
+        }
+
+        #main{
+            width:1000px;
+            margin::auto;
+        }
+        .column{
+            float: left;
+        }
+        .panel{
+            overflow: hidden;
+        }
+        .img{
+            float: left;
+            padding-right: 10px;
+            padding-bottom: 10px;
+        }
+        .item{
+            font-size:12pt;
+            font-style: italic;
+            font-family:sans-serif;
+            border-top:1px solid black;
+        }
+        .item p{
+            border-bottom:1px solid black;
+            padding-bottom: 5px;
+            margin:3px;
+        }
+
+    </style>
+</head>
+
+<body>
+<div id="main">
+    <div class="first panel">
+        <div class="column wide">
+            <h1 id="h1">Stanford Performing Arts</h1>
+        </div>
+        <div class="column narrow">
+            <p class="edition" style="margin:auto">Autumn 2012</p>
+            <p class="edition" style="margin:auto">Edition</p>
+        </div>
+    </div>
+
+    <div class="second panel">
+        <div class="column bing">
+
+            <p id="bing">Bing Concert Hall</p>
+            <div class="img">
+            <img src="bing.jpg" alt="bing concert hall" style="width:200px height:150px">
+            </div>
+            <p>
+                The Bing Concert Hall at Stanford will play a vital role on campus and in the local community. The hall's exceptional acoustics and state-of-the-art technical capabilities will showcase the world's finest performers.
+            </p>
+            <p>
+                The hall is scheduled to open early in 2013. The concert hall will have 844 seats in an intimate vineyard-style configuration, with terraced sections wrapping all the way around the stage.
+            </p>
+
+        </div>
+        <div class="column calendar">
+            <p id="calendar">
+                Calendar
+            </p>
+            <div class="item">
+            <p>Harmony for Humanity: Daniel Pearl World Music Concert</p>
+            <p>Sundays with the St. Lawrence String Quartet</p>
+            <p>Merce Cunningham Dance Company</p>
+            <p>Juilliard String Quartet</p>
+            </div>
+
+        </div>
+    </div>
+</div>
+</body>
+</html>
