@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Stanford Connection</title>
+    <style type="text/css">
+        #main{
+            width:1600px;
+            display:flex;
+            flex-direction:row;
+        }
+        #lefttoppanel{
+            width:520px;
+            display:flex;
+            flex-direction:row;
+        }
+        #connection{
+            font-family:Arial;
+            font-size:30pt;
+            color:white;
+            margin-left:10px;
+            padding:20px;
+            padding-left:30px;
+            background-color: #9A0000;
+            width:600px;
+        }
+
+        #toprightcolumn img{
+            height:85px;
+            margin-top:27px;
+        }
+
+        #rightmaincolumn{
+            margin:20px;
+            margin-top:30px;
+            width:200px;
+        }
+        #leftmaincolumn{
+            display:flex;
+            flex-direction:column;
+        }
+        #leftbottompanel{
+            display:flex;
+            flex-direction:row;
+            margin-left:20px;
+        }
+        #lowerrightcolumn{
+            margin-left:30px;
+            padding-top:5px;
+            width:480px;
+        }
+        .title{
+            padding: 5px;
+            border-top:2px solid black;
+            border-bottom:2px solid black;
+            background-color: #CC9191;
+            font-weight:bold;
+        }
+        .updates{
+            padding-top:10px;
+            margin-top: 30px;
+            border-top:1px solid black;
+
+        }
+        .updates{
+          font-family: arial;
+        }
+    </style>
+</head>
+<body>
+<div id="main">
+    <div id="leftmaincolumn">
+        <div id="lefttoppanel">
+            <div id="topleftcolumn">
+                <h1 id="connection">Stanford Connection</h1>
+            </div>
+            <div id="toprightcolumn">
+                <img src="tree-logo.gif" alt="tree-logo">
+            </div>
+        </div>
+        <div id="leftbottompanel">
+            <div id="lowerleftcolumn">
+                <div id="dogs">
+                    <img src="molly.jpg" alt="molly pictures">
+                </div>
+                <div id="about">
+                    <div class="title">About me</div>
+                    <p style="margin:6px"><strong>Birthday:</strong> December 8, 2001</p>
+                    <p style="margin:6px"><strong>Gender: </strong>Female</p>
+
+                </div>
+                <div id="friends">
+                    <div class="title">Friends</div>
+                    <div style="font-weight: bold;">
+                    <p style="margin:6px">Patrick Young</p>
+                    <p style="margin:6px">Yixiao Jiang</p>
+                    </div>
+
+                </div>
+
+            </div>
+            <div id="lowerrightcolumn">
+                <h1 style="margin-top:2px; margin-bottom:20px">Molly the Flopop</h1>
+                <div class="title">Status updates</div>
+                <p class="updates">Got fed, very happy</p>
+                <p class="updates">I want to go for a walk</p>
+                <p class="updates">Have a fight with the cat</p>
+                <P class="updates">Share a bottle of milk with Yixiao</P>
+            </div>
+        </div>
+    </div>
+    <div id="rightmaincolumn">
+        <div class="title" style="width:250px">Post Updates</div>
+        <div style="margin-top:10px">
+            <textarea rows="6" cols="40">Enter Updates Here</textarea>
+            <span class="submitspace">&nbsp;</span><input type="submit" />
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>
