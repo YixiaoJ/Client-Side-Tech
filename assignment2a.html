@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<head>
+  <head>
+    <meta charset="utf-8" />
+<title>Cofigure Your GT Super Sportscar</title>
+    <script type="text/javascript">
+    function calculateTotal(){
+      var total = 0;
+      var configOptions = document.getElementsByName('conf');
+      for (i = 0; i<configOptions.length; i++){
+        if(configOptions[i].checked){
+          total += parseFloat(configOptions[i].value);
+          /*parsefloat is to parse a string and return a floating point number*/
+        }
+      }
+      var factoryOptions = document.getElementsByName('fac');
+       for (i=0; i<factoryOptions.length;i++){
+        if(factoryOptions[i].checked){
+          total += parseFloat(factoryOptions[i].value);
+        }
+      }
+      var dealerOptions = document.getElementsByName('dealer');
+      for(i=0;i<dealerOptions.length;i++){
+        if(dealerOptions[i].checked){
+          total += parseFloat(dealerOptions[i].value);
+        }
+      }
+      /*now convert the floating point number to a string with dollar sign and comm.learned from online forum*/
+      totalString = total.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+      document.getElementById('total').totalField.value="$"+totalString+".00";
+    }
+
+    function changePhoto(){
+      var carPhotos = [
+				{index: 0, pic: "red.jpg"},
+				{index: 1, pic: "blue.jpg"},
+				{index: 2, pic: "silver.jpg"},
+				{index: 3, pic: "white.jpg"},
+				{index: 4, pic: "black.jpg"}
+			]
+			var index = document.getElementById("choosecolor").chooseColor.selectedIndex;
+			var carPhoto = document.getElementById("carphoto");
+   		    for (i = 0; i < carPhotos.length; i++) {
+   		    	if (carPhotos[i].index == index) {
+   		    		carphoto.src = carPhotos[i].pic;
+    }
+  }
+}
+
+    </script>
+
+    <style>
+    #main{
+      display:flex;
+      flex-direction: row;
+    }
+    #leftpanel{
+      display: flex;
+      flex-direction: column;
+      width:400px;
+      margin-right:10px;
+    }
+    #image{
+      float:right;
+      margin-top: 20px;
+    }
+    #choosecolor{
+      float: left;
+      margin-right:40px;
+    }
+    #choosecolor select{
+      margin: 10px;
+    }
+    #choosecolor img{
+      margin:10px;
+    }
+
+    .heading{
+      height:15px;
+      padding:10px;
+      border: 1px black solid;
+      background-color: #808080;
+      margin:5px;
+      color:white;
+      font-family: sans-serif;
+    }
+    .col{
+      border:1px black solid;
+      margin:5px;
+      padding:5px;
+    }
+    .price{
+      float: right;
+      margin-right: 8px;
+    }
+
+    h1{
+      font-family: arial;
+    }
+    label{
+      margin: 10px;
+    }
+    .detail{
+      margin:5px;
+    }
+    </style>
+  </head>
+
+  <body>
+    <h1> Configure Your GT Super Sportscar</h1>
+    <div id="main">
+      <div id="leftpanel">
+          <form id="configuration">
+            <fieldset class="col">
+            <div class="heading">Configuration</div>
+            <label><input type="radio" name="conf" value="17790" />
+              GT Manual</label><span class="price"> $ 17,790.00</span><br />
+              <label><input type="radio" name="conf" value="18590" />
+                GT Automatic</label><span class="price">$18,590.00</span><br />
+                <label><input type="radio" name="conf" value="22455" />
+                  GT-S Manual</label><span class="price">$22,455.00</span><br />
+                  <label><input type="radio" name="conf" value="23155" />
+                    GT-S Sportshift</lebel><span class="price">$23.155.00</span><br />
+                  </fieldset>
+          </form>
+        <div id="factoryOption">
+          <form id="factoryOption">
+            <fieldset class="col">
+            <div class="heading"> Factory Options</div>
+            <label><input type="radio" name="fac" value="1235" />Option Combo #1</label><span class="price">$1235.00</span><br />
+              <ul class="detail"><li>Power Windoes, Doors, Cruise Contrl</li></ul>
+              <label><input type="radio" name="fac" value="3354" /> Option Combo #2</label><span class="price">$3354.00</span><br />
+              <ul class="detail">
+                <li>Rear Spoiler and Fog Lamps</li>
+                <li>Keyless Entry</li>
+                <li>Power Tilt & Slide Moonroof</li>
+                <li>Power Windows, Doors, Cruise Control</li></ul>
+              <label><input type="radio" name="fac" value="0" />No Combo</label><span class="price">$0</span><br />
+              </fieldset>
+              </form>
+        </div>
+        <div id="dealerOption" >
+          <form id="dealerOption">
+            <fieldset class="col">
+            <div class="heading">Dealer Options</div>
+            <label><input type="radio" name="dealer" value="550" />Upgraded Stereo System</label><span class="price">$550.00</span><br />
+            <label><input type="radio" name="dealer" value="399" />VIP Security System</label><span class="price">$399.00</span><br />
+            <label><input type="radio" name="dealer" value="295" />Auto-Dimming Mirror</lavel><span class="price">$295.00</span><br />
+            </div>
+          </fieldset>
+        </form>
+
+          <div id="totalPrice" >
+        <form id="total">
+          <fieldset class="col">
+          <div class="heading">Total Price</div>
+          <input type="text" name="totalField"/><span class="price"/><!-- float the button to right-->
+          <input type="button" value="CalculateTotal" onclick="calculateTotal();">
+        </fieldset >
+      </form>
+      </div>
+      </div>
+
+
+      <div id="rightpanel">
+        <div id="chooseColor">
+          <form id="choosecolor">
+            <fieldset class="col">
+        <div class="heading">Choose A color</div>
+        <div id="image"><img id="carphoto" src="red.jpg" alt="car photo" /></div>
+              <select name="chooseColor" size="5"  onchange="changePhoto();" />
+              <option selected="selected">Red</option>
+              <option>Blue</option>
+              <option>Silver</option>
+              <option>White</option>
+              <option>Black</option>
+            </fieldset>
+            </form>
+          </div>
+      </div>
+    </div>
+  </body>
+</html>
